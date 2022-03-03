@@ -1,7 +1,9 @@
 :root {
   /* Core */
   --primary: #8F3718;
-  --primary-dark: #6D1506;
+  --primary-dark: #813216;
+  --primary-darker: #702c13;
+  --primary-darkest: #5f2510;
 
   /* Helpers */
   --text: #333;
