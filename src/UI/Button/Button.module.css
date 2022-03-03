@@ -1,3 +1,4 @@
+/* Basic */
 .button {
   padding: 1.2rem 2.4rem;
   background-color: var(--primary);
@@ -5,4 +6,28 @@
   border: none;
   border-radius: 100rem;
   text-align: center;
+  transition: 150ms ease-in-out;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: var(--primary-dark);
+}
+
+/* Darker */
+.buttonPrimaryDark {
+  background-color: var(--primary-dark);
+}
+
+.buttonPrimaryDark:hover {
+  background-color: var(--primary-darker);
+}
+
+/* Darkest */
+.buttonPrimaryDarker {
+  background-color: var(--primary-darker);
+}
+
+.buttonPrimaryDarker:hover {
+  background-color: var(--primary-darkest);
 }
