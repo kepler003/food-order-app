@@ -1,5 +1,5 @@
 import cls from './Icon.module.css';
-import cartIcon from '../icons/cart.png';
+import cartIcon from '../../icons/cart.png';
 
 const Icon = ({ className, name, color }) => {
   const icons = new Map([['cart', cartIcon]]);
