@@ -1,5 +1,7 @@
 /* Basic */
 .button {
+  display: flex;
+  align-items: center;
   padding: 1.2rem 2.4rem;
   background-color: var(--primary);
   color: white;
