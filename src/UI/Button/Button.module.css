@@ -9,6 +9,8 @@
   transition: 150ms ease-in-out;
 }
 
+/* -------------------- Colors */
+
 .button:hover {
   cursor: pointer;
   background-color: var(--primary-dark);
@@ -30,4 +32,10 @@
 
 .buttonPrimaryDarker:hover {
   background-color: var(--primary-darkest);
+}
+
+/* -------------------- Sizes */
+
+.small {
+  padding: 0.8rem 1.6rem;
 }
