@@ -1,0 +1,32 @@
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.price {
+  color: var(--primary);
+}
+
+.description {
+  margin: 0.8rem 0;
+  color: var(--text-light);
+}
+
+.amount {
+  width: 6.4rem;
+  margin-left: 1.2rem;
+  padding: 0.8rem 1.2rem;
+}
+
+.addBox {
+  text-align: end;
+}
+
+.add {
+  margin: 1.2rem 0 0 auto;
+}
+
+.addIcon {
+  margin-right: 0.8rem;
+}
