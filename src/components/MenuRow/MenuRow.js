@@ -3,18 +3,18 @@ import Button from '../../UI/Button/Button';
 import Icon from '../../UI/Icon/Icon';
 import cls from './MenuRow.module.css';
 
-const MenuRow = () => {
+const MenuRow = ({ name, description, price, separation }) => {
   return (
-    <div className={cls.row}>
+    <div className={[cls.row, separation ? cls.separation : ''].join(' ')}>
       <div>
         <p>
-          <b>Sushi</b>
+          <b>{name}</b>
         </p>
         <p className={cls.description}>
-          <i>Finest fish and veggies</i>
+          <i>{description}</i>
         </p>
         <p className={cls.price}>
-          <b>$22.99</b>
+          <b>${price}</b>
         </p>
       </div>
       <div className={cls.addBox}>

@@ -4,6 +4,12 @@
   justify-content: space-between;
 }
 
+.row.separation {
+  margin-top: 2.4rem;
+  padding-top: 2.4rem;
+  border-top: 1px solid hsla(0, 0%, 0%, 0.15);
+}
+
 .price {
   color: var(--primary);
 }
