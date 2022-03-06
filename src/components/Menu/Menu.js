@@ -5,25 +5,25 @@ const dishes = [
   {
     name: 'Sushi',
     description: 'Finest fish and veggies',
-    price: 22.99,
+    price: 2299,
     id: Math.random().toString(),
   },
   {
     name: 'Pancaces',
     description: 'Best pancakes in USA',
-    price: 22.99,
+    price: 1589,
     id: Math.random().toString(),
   },
   {
     name: 'Hamburger',
     description: 'Beef and bun',
-    price: 22.99,
+    price: 2500,
     id: Math.random().toString(),
   },
   {
     name: 'Pizza',
     description: 'Crunchy crust with delicious cheese and salami',
-    price: 22.99,
+    price: 3400,
     id: Math.random().toString(),
   },
 ];
