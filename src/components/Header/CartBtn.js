@@ -4,7 +4,7 @@ import Button from '../../UI/Button/Button';
 
 const CartBtn = () => {
   return (
-    <Button className={cls.btn} btnType='primary-darker'>
+    <Button className={cls.btn} variant='primary-darker'>
       <Icon className={cls.icon} name='cart' color='white' />
       <span className={cls.label}>Your Cart</span>
       <span className={cls.number}>0</span>

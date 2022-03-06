@@ -1,24 +1,24 @@
 import cls from './Button.module.css';
 
 const Button = (props) => {
-  const { children, btnType = 'primary' } = props;
+  const { children, variant = 'primary' } = props;
 
-  const btnTypes = new Map([
+  const variants = new Map([
     ['primary', ''],
     ['primary-dark', cls.buttonPrimaryDark],
     ['primary-darker', cls.buttonPrimaryDarker],
   ]);
 
-  if (!btnTypes.has(btnType)) {
-    throw new Error(`Btn "${btnType}" doesn't exist.`);
+  if (!variants.has(variant)) {
+    throw new Error(`Btn "${variant}" doesn't exist.`);
   }
 
   props = {
     ...props,
-    className: props.className + ' ' + cls.button + ' ' + btnTypes.get(btnType),
+    className: props.className + ' ' + cls.button + ' ' + variants.get(variant),
   };
   delete props.children;
-  delete props.btnType;
+  delete props.variant;
 
   return <button {...props}>{children}</button>;
 };
