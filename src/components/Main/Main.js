@@ -1,5 +1,6 @@
 import cls from './Main.module.css';
 import foodImg from '../../images/food.jpg';
+import Menu from '../Menu/Menu';
 
 const Main = () => {
   return (
@@ -18,8 +19,8 @@ const Main = () => {
           Molestiae, perspiciatis soluta?
         </p>
       </div>
-      <div>
-        <p>Menu list</p>
+      <div className={cls.menuBox}>
+        <Menu />
       </div>
     </main>
   );
