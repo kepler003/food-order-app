@@ -31,6 +31,8 @@
 }
 
 .menuBox {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
   margin-top: 2.4rem;
-  text-align: center;
 }
