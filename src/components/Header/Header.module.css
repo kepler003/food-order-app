@@ -15,25 +15,3 @@
   font-size: 3.2rem;
   font-weight: bold;
 }
-
-.btn {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-}
-
-.icon {
-  width: 1.6rem;
-  margin-top: -0.4rem;
-}
-
-.label {
-  margin: 0 1.2rem;
-}
-
-.number {
-  padding: 0.4rem 1.6rem;
-  background-color: var(--primary);
-  border-radius: 10rem;
-  font-weight: bold;
-}
