@@ -4,7 +4,7 @@ import Menu from '../Menu/Menu';
 
 const Main = () => {
   return (
-    <main>
+    <main className={cls.main}>
       <div className={cls.imgBox}>
         <img className={cls.img} src={foodImg} alt='Food on the table' />
       </div>
