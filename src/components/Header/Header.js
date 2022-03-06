@@ -1,5 +1,5 @@
 import cls from './Header.module.css';
-import CartBtn from './CartBtn';
+import CartBtn from '../CartBtn/CartBtn';
 
 const Header = () => {
   return (
