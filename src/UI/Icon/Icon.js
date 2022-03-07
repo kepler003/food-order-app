@@ -4,17 +4,7 @@ import checkIcon from '../../icons/check.png';
 import plusIcon from '../../icons/plus.png';
 import minusIcon from '../../icons/minus.png';
 
-const Icon = (props) => {
-  const { className, name, color } = props;
-
-  props = {
-    ...props,
-    className: className + ' ' + cls.box,
-  };
-
-  delete props.name;
-  delete props.color;
-
+const Icon = ({ className, name, color, ...props }) => {
   const icons = new Map([
     ['cart', cartIcon],
     ['check', checkIcon],
@@ -26,10 +16,11 @@ const Icon = (props) => {
     throw Error(`Icon "${name}" doesn't exist.`);
   }
 
+  className = className + ' ' + cls.box;
   const imgClass = color === 'white' ? cls.white : '';
 
   return (
-    <span {...props}>
+    <span className={className} {...props}>
       <img className={[cls.img, imgClass].join(' ')} src={icons.get(name)} />
     </span>
   );
