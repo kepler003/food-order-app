@@ -1,0 +1,40 @@
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: hsla(0, 0%, 0%, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.modal {
+  width: 100%;
+  max-width: 60rem;
+  padding: 2.4rem;
+  background-color: white;
+  border-radius: 1.6rem;
+}
+
+.summary {
+  text-align: end;
+  font-size: 2.4rem;
+}
+
+.summary span {
+  margin-left: 0.4em;
+  font-weight: bold;
+}
+
+.footerBtns {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.6rem;
+}
+
+.footerBtn {
+  margin-left: 1.6rem;
+}
