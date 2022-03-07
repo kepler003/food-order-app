@@ -11,6 +11,7 @@ const Button = ({
     ['primary', ''],
     ['primary-dark', cls.buttonPrimaryDark],
     ['primary-darker', cls.buttonPrimaryDarker],
+    ['outline-primary', cls.buttonOutlinePrimary],
   ]);
 
   const sizes = new Map([

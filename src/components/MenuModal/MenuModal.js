@@ -52,7 +52,11 @@ const MenuModal = ({ isActive = false, onClose }) => {
                 <span>${totalPrice}</span>
               </p>
               <div className={cls.footerBtns}>
-                <Button className={cls.footerBtn} onClick={onClose}>
+                <Button
+                  className={cls.footerBtn}
+                  variant='outline-primary'
+                  onClick={onClose}
+                >
                   Close
                 </Button>
                 <Button

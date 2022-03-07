@@ -19,8 +19,8 @@ const Row = ({ name, price, amount, onAdd, onRemove }) => {
       </div>
       <div className={cls.controlBtns}>
         <p className={cls.amount}>x{amount}</p>
-        <Button className={cls.controlBtn} size='small' onClick={removeHandler}>
-          <Icon name='minus' color='white' />
+        <Button className={cls.controlBtn} variant='outline-primary' size='small' onClick={removeHandler}>
+          <Icon name='minus' />
         </Button>
         <Button className={cls.controlBtn} size='small' onClick={addHandler }>
           <Icon name='plus' color='white' />

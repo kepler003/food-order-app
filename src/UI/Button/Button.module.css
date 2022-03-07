@@ -36,6 +36,17 @@
   background-color: var(--primary-darkest);
 }
 
+/* Primary outline */
+.buttonOutlinePrimary {
+  background-color: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.buttonOutlinePrimary:hover {
+  background-color: hsla(0, 0%, 0%, 0.1);
+}
+
 /* -------------------- Sizes */
 
 .small {
