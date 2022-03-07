@@ -4,6 +4,10 @@
   margin-left: auto;
 }
 
+.btn.jump {
+  animation: jump 150ms ease-in-out;
+}
+
 .icon {
   width: 1.6rem;
   margin-top: -0.4rem;
@@ -18,4 +22,18 @@
   background-color: var(--primary);
   border-radius: 10rem;
   font-weight: bold;
+}
+
+@keyframes jump {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
