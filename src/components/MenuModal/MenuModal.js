@@ -9,9 +9,12 @@ const MenuModal = ({ isActive = false, onClose }) => {
   const menuCtx = useContext(MenuContext);
 
   useEffect(() => {
-    document.body.style.overflow = 'hidden';
-    return () => (document.body.style.overflow = 'auto');
-  }, []);
+    if (isActive) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [isActive]);
 
   const modalRef = useRef();
 
