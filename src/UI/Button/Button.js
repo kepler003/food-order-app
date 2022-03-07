@@ -1,8 +1,12 @@
 import cls from './Button.module.css';
 
-const Button = (props) => {
-  const { children, variant = 'primary', size = 'normal' } = props;
-
+const Button = ({
+  children,
+  variant = 'primary',
+  size = 'normal',
+  className,
+  ...props
+}) => {
   const variants = new Map([
     ['primary', ''],
     ['primary-dark', cls.buttonPrimaryDark],
@@ -22,22 +26,20 @@ const Button = (props) => {
     throw new Error(`Btn size "${size}" doesn't exist.`);
   }
 
-  props = {
-    ...props,
-    className:
-      props.className +
-      ' ' +
-      cls.button +
-      ' ' +
-      variants.get(variant) +
-      ' ' +
-      sizes.get(size),
-  };
+  className =
+    className +
+    ' ' +
+    cls.button +
+    ' ' +
+    variants.get(variant) +
+    ' ' +
+    sizes.get(size);
 
-  delete props.children;
-  delete props.variant;
-
-  return <button {...props}>{children}</button>;
+  return (
+    <button className={className} {...props}>
+      {children}
+    </button>
+  );
 };
 
 export default Button;
