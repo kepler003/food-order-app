@@ -2,12 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.row.separation {
-  margin-top: 1.6rem;
-  padding-top: 1.6rem;
-  border-top: hsla(0, 0%, 0%, 0.2);
+  margin-bottom: 1.6rem;
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0.1);
 }
 
 .name {
