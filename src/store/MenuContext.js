@@ -35,11 +35,15 @@ const menuReducer = (state, { type, name, amount = 1 }) => {
       if (state.some((item) => item.name === name)) {
         return state.map((item) => {
           if (item.name !== name) return item;
-          return { name, price: item.amount * price, amount: item.amount + +amount };
+          return {
+            ...item,
+            price: (item.amount + +amount) * price,
+            amount: item.amount + +amount,
+          };
         });
       }
 
-      return [...state, { name, price, amount }];
+      return [...state, { name, price, amount, id: Math.random().toString() }];
     }
     case 'remove': {
       const { price } = menu.find((dish) => dish.name === name);
@@ -47,7 +51,11 @@ const menuReducer = (state, { type, name, amount = 1 }) => {
       return state
         .map((item) => {
           if (item.name !== name) return item;
-          return { name, price: item.amount * price, amount: item.amount - +amount };
+          return {
+            ...item,
+            price: (item.amount - +amount) * price,
+            amount: item.amount - +amount,
+          };
         })
         .filter((item) => item.amount > 0);
     }
