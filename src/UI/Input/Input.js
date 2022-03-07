@@ -1,12 +1,8 @@
 import cls from './Input.module.css';
 
-const Input = (props) => {
-  props = {
-    ...props,
-    className: props.className + ' ' + cls.input,
-  };
-
-  return <input {...props} />;
+const Input = ({ className, ...props }) => {
+  className = className + ' ' + cls.input;
+  return <input className={className} {...props} />;
 };
 
 export default Input;
