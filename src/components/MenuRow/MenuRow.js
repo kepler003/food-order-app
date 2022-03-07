@@ -2,28 +2,23 @@ import Input from '../../UI/Input/Input';
 import Button from '../../UI/Button/Button';
 import Icon from '../../UI/Icon/Icon';
 import cls from './MenuRow.module.css';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const MenuRow = ({
   name,
   description,
-  price: dishPrice,
+  price,
   separation,
   onAdd,
 }) => {
-  const [price, setPrice] = useState(dishPrice);
   const [amount, setAmount] = useState(1);
-
-  useEffect(() => {
-    setPrice(amount * dishPrice);
-  }, [amount]);
 
   const handleAmountChange = (e) => {
     setAmount(e.target.value);
   };
 
   const onAddHandler = () => {
-    onAdd({ name });
+    onAdd({ name, amount });
   };
 
   return (

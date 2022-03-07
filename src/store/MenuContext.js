@@ -27,7 +27,7 @@ const menu = [
   },
 ];
 
-const menuReducer = (state, { type, name }) => {
+const menuReducer = (state, { type, name, amount = 1 }) => {
   switch (type) {
     case 'add': {
       const { price } = menu.find((dish) => dish.name === name);
@@ -35,11 +35,11 @@ const menuReducer = (state, { type, name }) => {
       if (state.some((item) => item.name === name)) {
         return state.map((item) => {
           if (item.name !== name) return item;
-          return { name, price: item.amount * price, amount: item.amount + 1 };
+          return { name, price: item.amount * price, amount: item.amount + +amount };
         });
       }
 
-      return [...state, { name, price, amount: 1 }];
+      return [...state, { name, price, amount }];
     }
     case 'remove': {
       const { price } = menu.find((dish) => dish.name === name);
@@ -47,7 +47,7 @@ const menuReducer = (state, { type, name }) => {
       return state
         .map((item) => {
           if (item.name !== name) return item;
-          return { name, price: item.amount * price, amount: item.amount - 1 };
+          return { name, price: item.amount * price, amount: item.amount - +amount };
         })
         .filter((item) => item.amount > 0);
     }
@@ -64,12 +64,12 @@ const MenuContext = React.createContext({
 export const MenuContextProvider = ({ children }) => {
   const [order, dispatchMenu] = useReducer(menuReducer, []);
 
-  const add = ({ name }) => {
-    dispatchMenu({ type: 'add', name });
+  const add = (data) => {
+    dispatchMenu({ type: 'add', ...data });
   };
 
-  const remove = ({ name }) => {
-    dispatchMenu({ type: 'remove', name });
+  const remove = (data) => {
+    dispatchMenu({ type: 'remove', ...data });
   };
 
   return (
