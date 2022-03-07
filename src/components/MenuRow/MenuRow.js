@@ -4,7 +4,13 @@ import Icon from '../../UI/Icon/Icon';
 import cls from './MenuRow.module.css';
 import { useEffect, useState } from 'react';
 
-const MenuRow = ({ name, description, price: dishPrice, separation }) => {
+const MenuRow = ({
+  name,
+  description,
+  price: dishPrice,
+  separation,
+  onAdd,
+}) => {
   const [price, setPrice] = useState(dishPrice);
   const [amount, setAmount] = useState(1);
 
@@ -14,6 +20,10 @@ const MenuRow = ({ name, description, price: dishPrice, separation }) => {
 
   const handleAmountChange = (e) => {
     setAmount(e.target.value);
+  };
+
+  const onAddHandler = () => {
+    onAdd({ name });
   };
 
   return (
@@ -41,7 +51,7 @@ const MenuRow = ({ name, description, price: dishPrice, separation }) => {
             value={amount}
           />
         </div>
-        <Button className={cls.add} size='small'>
+        <Button className={cls.add} size='small' onClick={onAddHandler}>
           <Icon className={cls.addIcon} color='white' name='plus' />
           Add
         </Button>
